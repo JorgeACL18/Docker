@@ -97,6 +97,15 @@ Ahora que está conectadas ya podremos hacer ping entre contenedores:
 <img width="800" height="752" alt="Captura de pantalla 2025-10-06 171958" src="https://github.com/user-attachments/assets/bd8a0bf0-9099-4a5d-802d-ab21de95c171" />
 
 
+## Paso 6:
+
+Ahora, ¿qué pasa si cerramos las terminales de los contenedores?
+
+
+En resumen, no pasa nada ya que los contenedores no dependen al 100% de la terminal.
+
+<img width="800" height="1809" alt="Captura de pantalla 2025-10-06 183903" src="https://github.com/user-attachments/assets/2d9a6973-cca7-4298-9949-9452a39e0f35" />
+
 
 
 
