@@ -36,7 +36,7 @@ Para crear el contenedor, utilizaremos "docker run hello-world". El comando "run
 
 ## Paso 3:
 
-Ahora que ya tenemos la imagen, podemos crear nuestro primer contenedor con ella. Este contenedor, que llamaremos "damalp_1", lo crearemos usando "docker run -it --name=damaalp_1 alpine /bin/sh". Este código está compuesto por el comando "run", "-i" hace que podamos interactuar con le contenedor, "-t" hace que podamos trabajar con el contenedor desde nuestra terminal sin tener que entrar al mismo, "name" que permite poner el nombre y "/bin/sh" nos permite entrar al contenedor una vez ejecutemos el código.
+Ahora que ya tenemos la imagen, podemos crear nuestro primer contenedor con ella. Este contenedor, que llamaremos "damalp_1", lo crearemos usando "docker run -it --name=damalp_1 alpine /bin/sh". Este código está compuesto por el comando "run", "-i" hace que podamos interactuar con le contenedor, "-t" hace que podamos trabajar con el contenedor desde nuestra terminal sin tener que entrar al mismo, "name" que permite poner el nombre y "/bin/sh" nos permite entrar al contenedor una vez ejecutemos el código.
 
 
 <img width="800" height="69" alt="Captura de pantalla 2025-10-06 162655" src="https://github.com/user-attachments/assets/299376f5-12cb-403e-b7a7-51c007406ca8" />
@@ -74,3 +74,31 @@ Por último, para comprobar si podemos hacer ping a Google, tenemos que introduc
 
 
 <img width="800" height="730" alt="Captura de pantalla 2025-10-06 164436" src="https://github.com/user-attachments/assets/2cddf6f9-49ba-43f6-9c72-2d8fd90b5fef" />
+
+
+## Paso 5:
+
+En este siguiente paso tenemos que crear otro contenedor con la misma imagen Alpine. Para esto utilizaremos es mismo código que usamos antes, o sea, "docker run -it --name=damalp_2 alpine /bin/sh". Este segundo contenedor se llamará "damalp_2", una vez dentro podemos ver que es igual al contenedor que creamos con la misma imagen.
+
+Ya que creamos este segundo contenedor, se nos manda a comprobar si podemos hacer ping entre los dos contenedores. Para eso solo hay que hacer "ping damalp_1"
+
+
+<img width="800" height="505" alt="Captura de pantalla 2025-10-06 170753" src="https://github.com/user-attachments/assets/b31736aa-a0ce-45f2-8692-206ca56c224a" />
+
+
+Como se puede ver, al intentar hacer ping, nos da error. Para solucionar esto, tenemos que crear una red para realizar la conexión entre los dos contenedores. Con "docker network create red_dam" podemos crear esta red con el nombre "red_dam" y, para conectar los contenedores a la red, solo usaremos "docker network connect red_dam damalp_Nº".
+
+
+<img width="800" height="186" alt="Captura de pantalla 2025-10-06 171614" src="https://github.com/user-attachments/assets/1ebd6f1e-98b6-4812-b588-8bd09d4fe99a" />
+
+Ahora que está conectadas ya podremos hacer ping entre contenedores:
+
+
+<img width="800" height="752" alt="Captura de pantalla 2025-10-06 171958" src="https://github.com/user-attachments/assets/bd8a0bf0-9099-4a5d-802d-ab21de95c171" />
+
+
+
+
+
+
+
