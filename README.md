@@ -107,6 +107,29 @@ En resumen, no pasa nada ya que los contenedores no dependen al 100% de la termi
 <img width="800" height="1809" alt="Captura de pantalla 2025-10-06 183903" src="https://github.com/user-attachments/assets/2d9a6973-cca7-4298-9949-9452a39e0f35" />
 
 
+## Paso 7: 
+
+
+Ya que realizamos todas las tareas dentro de los contenedores, se quiere saber cuanta memoria RAM y cuanta memoria del disco duro utilizarón.
+
+Para averiguar esto es muy sencillo ya que solo hay dos código que podemos usar.
+
+**Memoria RAM:**
+Con el código "docker stats" podemos ver cuanta memoria utilizan los contenedores en ejecución. Se puede apreciar en MEM USAGE y MEM%:
+
+<img width="800" height="39" alt="Captura de pantalla 2025-10-06 172553" src="https://github.com/user-attachments/assets/b4c5822f-69ee-432e-82d9-e9bc43bdd250" />
+<img width="800" height="135" alt="Captura de pantalla 2025-10-06 172601" src="https://github.com/user-attachments/assets/e8eef907-8969-4cdf-b37f-29a943b78982" />
+
+
+**Memoria del disco duro**
+Con "docker ps -a" podemos ver las características generales de los contenedores en ejecución. Para ver cuanto espacio ocupan tenemos que ver el final de la lista donde pone SIZE:
+
+
+<img width="800" height="178" alt="Captura de pantalla 2025-10-06 172809" src="https://github.com/user-attachments/assets/65095dbb-666c-46de-a473-f523998a2f4d" />
+
+
+# FIN
+
 
 
 
