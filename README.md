@@ -46,3 +46,31 @@ Ahora que ya tenemos la imagen, podemos crear nuestro primer contenedor con ella
 
 
 En esta segunda imagen podemos ver que el contenedor ya estña en ejecución.
+
+
+## Paso 4:
+
+Ya teniendo el contenedor, vamos a entrar a el para ver si no está vacío.
+
+
+<img width="800" height="1674" alt="Captura de pantalla 2025-10-06 164322" src="https://github.com/user-attachments/assets/a6e94705-b18f-4149-82a7-28f00d865feb" />
+
+
+Como podemos ver, no está vacío.
+
+
+Por otro lado, podemos ver que tenemos disponible la terminal del contenedor. Para esta actividad tenemos que buscar cual es la dirección IP del mismo y comprobar si se puede hacer ping a Google.
+
+
+<img width="800" height="623" alt="Captura de pantalla 2025-10-06 164329" src="https://github.com/user-attachments/assets/702e2286-ece9-4d7b-92f7-64900aebe161" />
+
+
+Para obtener la dirección IP solo tendremos que ejecutar "ip addr show eth0" y se nos mostrarán unas líneas de código. Aquí tenemos que buscar la línea que ponga "inet" y es ahí donde tendremos nuestra dirección IP.
+
+<img width="800" height="701" alt="Captura de pantalla 2025-10-06 164347" src="https://github.com/user-attachments/assets/a8b789bd-85c0-406d-bdc7-75aa4164bc85" />
+
+
+Por último, para comprobar si podemos hacer ping a Google, tenemos que introducir "ping -c 4 google.com" y verémos como hace lo que se nos pide. Es importante indicar las veces que queramos hacer ping a cualquier sitio ya que podemos desencadenar un bucle infinito de pings, es por eso que en el comando se escribe "-c 4" para definir el límite.
+
+
+<img width="800" height="730" alt="Captura de pantalla 2025-10-06 164436" src="https://github.com/user-attachments/assets/2cddf6f9-49ba-43f6-9c72-2d8fd90b5fef" />
